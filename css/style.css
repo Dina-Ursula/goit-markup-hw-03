@@ -14,7 +14,7 @@ html {
   --back-button-focus-hover: #2196f3;
   --team-backgroung: #f5f4fa;
 }
-.body {
+body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text-color);
   background: #ffffff;
@@ -52,7 +52,7 @@ html {
 .nav-menu > .menu-item-list:not(:last-child) {
   margin-right: 50px;
 }
-.nav-menu .menu-item-list {
+.menu-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -123,9 +123,6 @@ html {
 
 /* Main page */
 .hero {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   padding-bottom: 200px;
   padding-top: 200px;
 
@@ -169,13 +166,8 @@ html {
 }
 /* Преимущества */
 .section {
-  width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
   padding-top: 94px;
   padding-bottom: 47px;
-  margin-right: auto;
-  margin-left: auto;
 
   /* outline: 2px solid red; */
 }
@@ -193,13 +185,6 @@ html {
 }
 .item {
   width: 270px;
-  height: 75px;
-  left: 215px;
-  top: 800px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   /* or 171% */
@@ -233,51 +218,41 @@ html {
 }
 /* About */
 .section-technology {
-  width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-top: 47px;
+  margin-bottom: 50px;
 
   /* outline:2px solid  crimson; */
 }
 .title {
-  padding-top: 47px;
-  margin-bottom: 50px;
   margin-top: 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
-  width: 1200px;
-
   color: var(--future-title);
 }
-.icon-section {
+.icon-section-list {
   display: flex;
   padding-left: 0;
   padding-bottom: 94px;
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 1200px;
 }
-.icon-section > .icon-galery:not(:last-child) {
+.icon-section-list {
+  text-decoration: none;
+}
+.icon-section-list > .icon-galery:not(:last-child) {
   margin-right: 30px;
 }
 /* Team */
 .section-team {
-  background: var(--team-backgroung);
-
   padding-bottom: 94px;
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
-
+  padding-top: 94px;
+  background: var(--team-backgroung);
   /* outline: 2px solid orangered; */
 }
 .title-team {
-  padding-top: 94px;
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: bold;
@@ -298,9 +273,6 @@ html {
   font-style: normal;
 }
 .profession {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
 
@@ -335,10 +307,13 @@ html {
 /* Footer */
 
 .footer {
-  width: 1600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
-  background: #2f303a;
+  background-color: var(--hero-background-color);
 }
 
 .logo-style {
@@ -378,16 +353,12 @@ html {
   margin-right: auto;
   margin-left: auto;
   width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 60px;
 }
 .list-footer {
   display: block;
   width: 230px;
   margin: 0;
   padding-left: 0;
-  padding-bottom: 60px;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -407,9 +378,6 @@ html {
 
   color: rgba(255, 255, 255, 0.6);
 }
-.footer {
-  background-color: var(--hero-background-color);
-}
 /* Portfolio */
 .container {
   width: 1200px;
@@ -418,20 +386,21 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .button-list {
   display: flex;
-  width: 1200px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  padding-top: 94px;
-  padding-bottom: 50px;
+
+  margin-bottom: 50px;
   justify-content: center;
   text-align: center;
-
-  font-family: inherit;
   list-style: none;
 
   /* outline: 2px solid black; */
@@ -446,16 +415,28 @@ html {
   cursor: pointer;
 }
 .button-type {
+  display: inline-block;
   border-color: transparent;
   border-radius: 4px;
   margin-right: 8px;
-}
-/* .button-list .button-type:not(:last-child){
-  margin-right: 8px;
-} */
-.service-box {
-  padding-bottom: 94px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
 
+  left: 734px;
+  top: 180px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.service-box {
   /* outline: 2px solid black; */
 }
 .service-galery {
@@ -474,19 +455,13 @@ html {
 .portfolio-tittle {
   padding-right: 24px;
   padding-left: 24px;
-  padding: 20px;
+  padding-bottom: 20px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
 .title-service {
-  width: 322px;
-  height: 36px;
-  left: 639px;
-  top: 576px;
-
-  font-family: Roboto;
-  font-style: normal;
+  margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 36px;
@@ -514,4 +489,7 @@ html {
 .section-service {
   list-style: none;
   width: 370px;
+}
+.portfolio-header {
+  border-bottom: 1px solid #ececec;
 }
