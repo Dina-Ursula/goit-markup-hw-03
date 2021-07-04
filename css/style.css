@@ -27,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1200px;
+  /* width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -85,10 +85,17 @@ body {
 .menu-link:focus {
   color: #2196f3;
 }
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 .list {
   list-style: none;
 }
-
+.company-link {
+  display: block;
+  margin-left: auto;
+}
 .email-link {
   font-style: normal;
   font-weight: 500;
@@ -216,12 +223,12 @@ body {
 /* About */
 .section-technology {
   padding-top: 47px;
-  margin-bottom: 50px;
-
+  padding-bottom: 94px;
   /* outline:2px solid  crimson; */
 }
 .title {
   margin-top: 0;
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
@@ -232,7 +239,6 @@ body {
 .icon-section-list {
   display: flex;
   padding-left: 0;
-  padding-bottom: 94px;
 }
 .icon-section-list {
   text-decoration: none;
@@ -259,19 +265,26 @@ body {
   letter-spacing: 0.03em;
   color: var(--future-title);
 }
+.paragraph {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--future-title);
-
+  margin-top: 0;
+  margin-bottom: 10px;
   font-family: Roboto;
   font-style: normal;
 }
 .profession {
   font-size: 16px;
   line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   color: var(--main-text-color);
 }
@@ -334,22 +347,14 @@ body {
   color: #ffffff;
 }
 
-.address-link {
+.address-link .link {
+  display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
   letter-spacing: 0.03em;
-
-  color: #ffffff;
-}
-
-.address {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1200px;
 }
 .list-footer {
   display: block;
@@ -372,8 +377,10 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
+}
+.list-footer > .address-link {
+  color: #ffffff;
 }
 /* Portfolio */
 .container {
@@ -452,6 +459,7 @@ body {
 .portfolio-tittle {
   padding-right: 24px;
   padding-left: 24px;
+  padding-top: 20px;
   padding-bottom: 20px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -475,7 +483,6 @@ body {
 }
 .service {
   margin-top: 0;
-  padding-bottom: 20px;
   margin-bottom: 0;
   font-weight: normal;
   font-size: 16px;
